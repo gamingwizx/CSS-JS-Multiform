@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Multi Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet"
+    />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    
+    <main>
+      <div class="container container--wrapper row">
+        <div class="main__left">
+          <ul class="item-list flow-list">
+            <li class="item row active">
+              <button class="step-button">1</button>
+              <div class="step-content col">
+                <span class="step-title">Step 1</span>
+                <span class="step-description">Your Info</span>
+              </div>
+            </li>
+            <li class="item row">
+              <button class="step-button">2</button>
+              <div class="step-content col">
+                <span class="step-title">Step 2</span>
+                <span class="step-description">Select Plans</span>
+              </div>
+            </li>
+            <li class="item row">
+              <button class="step-button">3</button>
+              <div class="step-content col">
+                <span class="step-title">Step 3</span>
+                <span class="step-description">Add-ons</span>
+              </div>
+            </li>
+            <li class="item row">
+              <button class="step-button">4</button>
+              <div class="step-content col">
+                <span class="step-title">Step 4</span>
+                <span class="step-description">Summary</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="main__right flow-list">
+          <div class="content-container" data-step="0">
+            <header class="content-container__header">
+              <h1></h1>
+              <p></p>
+            </header>
+            <div class="content active">
+              <form action="" class="flow-list">
+                <div class="row flow-list">
+                  <label for="">Name</label>
+                  <input type="text" placeholder="Your name" />
+                </div>
+                <div class="row flow-list">
+                  <label for="">Email Address</label>
+                  <input type="text" placeholder="Email Address" />
+                </div>
+                <div class="row flow-list">
+                  <label for="">Phone Number</label>
+                  <input type="text" placeholder="e.g: +1 234 567 800" />
+                </div>
+              </form>
+            </div>
+            <div class="content inactive flow-list">
+              <div class="row plans">
+                <div class="col plan flow-list selected">
+                  <div><img class="arcade" src="image/icon-arcade.svg" alt="" /></div>
+                  <div class="plan__content">
+                    <p class="plan__title" data-service-name="Arcade">Arcade</p>
+                    <p class="plan__price" data-service-price="9">$9/mo</p>
+                  </div>
+                </div>
+                <div class="col plan flow-list">
+                  <div><img src="image/icon-advanced.svg" alt="" /></div>
+                  <div class="plan__content">
+                    <p class="plan__title" data-service-name="Advanced">Advanced</p>
+                    <p class="plan__price" data-service-price="12">$12/mo</p>
+                  </div>
+                </div>
+                <div class="col plan flow-list">
+                  <div><img src="image/icon-pro.svg" alt="" /></div>
+                  <div class="plan__content">
+                    <p class="plan__title" data-service-name="Pro">Pro</p>
+                    <p class="plan__price" data-service-price="15">$15/mo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row billing-duration">
+                <span class="duration-monthly">Monthly</span>
+
+                <label class="toggle">
+                  <input type="checkbox" />
+                  <span class="switch"></span>
+                </label>
+
+                <span class="duration-yearly">Yearly</span>
+              </div>
+            </div>
+            <div class="content inactive">
+              <div class="add-ons col">
+                <label class="row add-on selected">
+                  <div class="row add-on__left">
+                    <input type="checkbox" />
+                    <span class="col">
+                      <p class="add-on__title" data-extra-service-name="Customizable Profile">Customizable Profile</p>
+                      <p class="add-on__description">
+                        Custom theme on your profile
+                      </p>
+                    </span>
+                  </div>
+                  <div class="add-on__right">
+                    <p class="add-on__price" data-extra-service-price="2">$2/mo</p>
+                  </div>
+                </label>
+                <label class="row add-on selected">
+                  <div class="row add-on__left">
+                    <input type="checkbox" />
+                    <span class="col">
+                      <p class="add-on__title" data-extra-service-name="Online Service">Online Service</p>
+                      <p class="add-on__description">
+                        Access to multiplayer games
+                      </p>
+                    </span>
+                  </div>
+                  <div class="row add-on__right">
+                    <p class="add-on__price" data-extra-service-price="1">+$1/mo</p>
+                  </div>
+                </label>
+                <label class="row add-on selected">
+                  <div class="row add-on__left">
+                    <input type="checkbox" />
+                    <span class="col">
+                      <p cla`ss="add-on__title" data-extra-service-name="Larger Storage">Larger Storage</p>
+                      <p class="add-on__description">
+                        Extra 1TB of cloud storage
+                      </p>
+                    </span>
+                  </div>
+                  <div class="add-on__right">
+                    <p class="add-on__price" data-extra-service-price="22">$2/mo</p>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div class="content summary inactive">
+              <div class="services-container col">
+                <div class="service row">
+                  <div class="col">
+                    <span class="summary__service-name" data-service-name>Arcade (Monthly)</span>
+                    <a class="change">Change</a>
+                  </div>
+                  <span class="summary__service-price">$9/mo</span>
+                </div>
+                <div class="services"></div>
+              </div>
+              <div class="total row">
+                  <p class="total-label">Total (per month)</p>
+                  <p class="total-price"data-total>+$12/mo</p>
+              </div>
+            </div>
+          </div>
+          <div class="row content-navigation">
+
+            <a class="back">Go Back</a>
+            <button class="next-step" data-current-step>Next Step</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <template add-on-template>
+      <div class="row extra-service">
+        <p class="extra-service-name" data-extra-service-name>Online Service</p>
+        <p class="extra-service-price"data-extra-service-price>+$1/mo</p>
+      </div>
+    </template>
+    
+  </body>
+</html>
